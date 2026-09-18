@@ -1,0 +1,16 @@
+{
+  "query": "SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users' AND COLUMN_NAME IN ('passwordHash', 'isEmailVerified');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute SELECT COLUMN_NAME FROM INFORMATION_SCHEMA.COLUMNS WHERE TABLE_NAME = 'users' AND COLUMN_NAME IN ('passwordHash', 'isEmailVerified');",
+  "rows": [
+    {
+      "COLUMN_NAME": "passwordHash"
+    },
+    {
+      "COLUMN_NAME": "isEmailVerified"
+    }
+  ],
+  "messages": [],
+  "stdout": "COLUMN_NAME\npasswordHash\nisEmailVerified\n",
+  "stderr": "",
+  "execution_time_ms": 1606
+}

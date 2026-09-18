@@ -1,0 +1,13 @@
+{
+  "query": "SELECT COUNT(*) as remaining_users FROM users;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute SELECT COUNT(*) as remaining_users FROM users;",
+  "rows": [
+    {
+      "remaining_users": "0"
+    }
+  ],
+  "messages": [],
+  "stdout": "remaining_users\n0\n",
+  "stderr": "",
+  "execution_time_ms": 350
+}

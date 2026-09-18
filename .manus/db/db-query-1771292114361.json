@@ -1,0 +1,64 @@
+{
+  "query": "SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY TABLE_NAME;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute SELECT TABLE_NAME FROM INFORMATION_SCHEMA.TABLES WHERE TABLE_SCHEMA = DATABASE() ORDER BY TABLE_NAME;",
+  "rows": [
+    {
+      "TABLE_NAME": "__drizzle_migrations"
+    },
+    {
+      "TABLE_NAME": "actionItems"
+    },
+    {
+      "TABLE_NAME": "agendas"
+    },
+    {
+      "TABLE_NAME": "assessmentResponses"
+    },
+    {
+      "TABLE_NAME": "assessments"
+    },
+    {
+      "TABLE_NAME": "auditLogs"
+    },
+    {
+      "TABLE_NAME": "complianceLogs"
+    },
+    {
+      "TABLE_NAME": "documentPermissions"
+    },
+    {
+      "TABLE_NAME": "documents"
+    },
+    {
+      "TABLE_NAME": "emailVerificationTokens"
+    },
+    {
+      "TABLE_NAME": "meetingParticipants"
+    },
+    {
+      "TABLE_NAME": "meetings"
+    },
+    {
+      "TABLE_NAME": "minutes"
+    },
+    {
+      "TABLE_NAME": "notifications"
+    },
+    {
+      "TABLE_NAME": "organizationSubscriptions"
+    },
+    {
+      "TABLE_NAME": "organizations"
+    },
+    {
+      "TABLE_NAME": "rememberMeTokens"
+    },
+    {
+      "TABLE_NAME": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "TABLE_NAME\n__drizzle_migrations\nactionItems\nagendas\nassessmentResponses\nassessments\nauditLogs\ncomplianceLogs\ndocumentPermissions\ndocuments\nemailVerificationTokens\nmeetingParticipants\nmeetings\nminutes\nnotifications\norganizationSubscriptions\norganizations\nrememberMeTokens\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 351
+}

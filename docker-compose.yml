@@ -1,0 +1,32 @@
+# Local development & test database for the African Board Platform (NurtGov).
+#
+#   docker compose up -d      # start MySQL with `nurtgov` (dev) and `nurtgov_test` databases
+#   docker compose down       # stop
+#   docker compose down -v    # stop and wipe all data
+#
+# Connection (matches .env.example):
+#   dev:  mysql://nurtgov:nurtgov@localhost:3306/nurtgov
+#   test: mysql://nurtgov:nurtgov@localhost:3306/nurtgov_test
+services:
+  mysql:
+    image: mysql:8.0
+    container_name: nurtgov-mysql
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: nurtgov
+      MYSQL_USER: nurtgov
+      MYSQL_PASSWORD: nurtgov
+    ports:
+      - "3306:3306"
+    volumes:
+      - nurtgov-mysql-data:/var/lib/mysql
+      - ./scripts/db-init:/docker-entrypoint-initdb.d:ro
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-uroot", "-proot"]
+      interval: 5s
+      timeout: 5s
+      retries: 20
+
+volumes:
+  nurtgov-mysql-data:

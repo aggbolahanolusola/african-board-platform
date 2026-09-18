@@ -1,0 +1,61 @@
+{
+  "query": "SHOW TABLES;",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute SHOW TABLES;",
+  "rows": [
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "__drizzle_migrations"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "actionItems"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "agendas"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "assessmentResponses"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "assessments"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "auditLogs"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "complianceLogs"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "documentPermissions"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "documents"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "emailVerificationTokens"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "meetingParticipants"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "meetings"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "minutes"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "notifications"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "organizationSubscriptions"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "rememberMeTokens"
+    },
+    {
+      "Tables_in_XMp6hT3CnEAEKp7mvHwLoL": "users"
+    }
+  ],
+  "messages": [],
+  "stdout": "Tables_in_XMp6hT3CnEAEKp7mvHwLoL\n__drizzle_migrations\nactionItems\nagendas\nassessmentResponses\nassessments\nauditLogs\ncomplianceLogs\ndocumentPermissions\ndocuments\nemailVerificationTokens\nmeetingParticipants\nmeetings\nminutes\nnotifications\norganizationSubscriptions\nrememberMeTokens\nusers\n",
+  "stderr": "",
+  "execution_time_ms": 352
+}

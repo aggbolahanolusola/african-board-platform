@@ -1,0 +1,26 @@
+{
+  "query": "SHOW COLUMNS FROM `users` WHERE Field IN ('passwordHash', 'isEmailVerified');",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute SHOW COLUMNS FROM `users` WHERE Field IN ('passwordHash', 'isEmailVerified');",
+  "rows": [
+    {
+      "Field": "passwordHash",
+      "Type": "varchar(255)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "NULL",
+      "Extra": ""
+    },
+    {
+      "Field": "isEmailVerified",
+      "Type": "tinyint(1)",
+      "Null": "YES",
+      "Key": "",
+      "Default": "0",
+      "Extra": ""
+    }
+  ],
+  "messages": [],
+  "stdout": "Field\tType\tNull\tKey\tDefault\tExtra\npasswordHash\tvarchar(255)\tYES\t\tNULL\t\nisEmailVerified\ttinyint(1)\tYES\t\t0\t\n",
+  "stderr": "",
+  "execution_time_ms": 2045
+}

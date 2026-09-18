@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS organizationSubscriptions (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  organizationId INT NOT NULL,\n  planId INT NOT NULL,\n  status ENUM('active', 'cancelled', 'paused') DEFAULT 'active',\n  billingCycle ENUM('monthly', 'yearly') DEFAULT 'monthly',\n  currentPeriodStart TIMESTAMP,\n  currentPeriodEnd TIMESTAMP,\n  cancelledAt TIMESTAMP NULL,\n  stripeSubscriptionId VARCHAR(255),\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute CREATE TABLE IF NOT EXISTS organizationSubscriptions (\n  id INT AUTO_INCREMENT PRIMARY KEY,\n  organizationId INT NOT NULL,\n  planId INT NOT NULL,\n  status ENUM('active', 'cancelled', 'paused') DEFAULT 'active',\n  billingCycle ENUM('monthly', 'yearly') DEFAULT 'monthly',\n  currentPeriodStart TIMESTAMP,\n  currentPeriodEnd TIMESTAMP,\n  cancelledAt TIMESTAMP NULL,\n  stripeSubscriptionId VARCHAR(255),\n  createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,\n  updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP\n);",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 1715
+}

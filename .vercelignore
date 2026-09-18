@@ -1,0 +1,20 @@
+# Keep the Vercel deploy lean — exclude what isn't needed to build/run on Vercel.
+node_modules
+dist
+.vercel
+
+# Mobile (Capacitor) wrappers — not part of the web deploy
+android
+ios
+
+# Local/dev artifacts
+.manus
+*.log
+.env
+.env.*
+!.env.example
+
+# Tests (not needed at build/runtime)
+**/*.test.ts
+**/*.spec.ts
+server/test

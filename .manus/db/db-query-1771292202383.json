@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS taskNotifications (id INT PRIMARY KEY AUTO_INCREMENT, taskId INT NOT NULL, userId INT NOT NULL, notificationType VARCHAR(100), isRead BOOLEAN DEFAULT false, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, INDEX idx_task_notification (taskId));\nCREATE TABLE IF NOT EXISTS emailVerificationTokens (id INT PRIMARY KEY AUTO_INCREMENT, userId INT NOT NULL, token VARCHAR(255) NOT NULL UNIQUE, expiresAt DATETIME NOT NULL, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP);\nCREATE TABLE IF NOT EXISTS rememberMeTokens (id INT PRIMARY KEY AUTO_INCREMENT, userId INT NOT NULL, tokenHash VARCHAR(255) NOT NULL UNIQUE, expiresAt DATETIME NOT NULL, revokedAt DATETIME, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, INDEX idx_user_remember (userId), INDEX idx_remember_expiry (expiresAt));",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute CREATE TABLE IF NOT EXISTS taskNotifications (id INT PRIMARY KEY AUTO_INCREMENT, taskId INT NOT NULL, userId INT NOT NULL, notificationType VARCHAR(100), isRead BOOLEAN DEFAULT false, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, INDEX idx_task_notification (taskId));\nCREATE TABLE IF NOT EXISTS emailVerificationTokens (id INT PRIMARY KEY AUTO_INCREMENT, userId INT NOT NULL, token VARCHAR(255) NOT NULL UNIQUE, expiresAt DATETIME NOT NULL, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP);\nCREATE TABLE IF NOT EXISTS rememberMeTokens (id INT PRIMARY KEY AUTO_INCREMENT, userId INT NOT NULL, tokenHash VARCHAR(255) NOT NULL UNIQUE, expiresAt DATETIME NOT NULL, revokedAt DATETIME, createdAt DATETIME DEFAULT CURRENT_TIMESTAMP, INDEX idx_user_remember (userId), INDEX idx_remember_expiry (expiresAt));",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 686
+}

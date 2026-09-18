@@ -1,0 +1,9 @@
+{
+  "query": "CREATE TABLE IF NOT EXISTS `rememberMeTokens` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `token` varchar(255) NOT NULL UNIQUE,\n  `tokenHash` varchar(255) NOT NULL,\n  `userAgent` text,\n  `ipAddress` varchar(45),\n  `expiresAt` timestamp NOT NULL,\n  `lastUsedAt` timestamp,\n  `revokedAt` timestamp,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_user_remember` (`userId`),\n  KEY `idx_token_remember` (`token`),\n  KEY `idx_expires_remember` (`expiresAt`)\n)",
+  "command": "mysql --batch --raw --column-names --default-character-set=utf8mb4 --host gateway03.us-east-1.prod.aws.tidbcloud.com --port 4000 --user 3CadV6k11uoohpr.root --database XMp6hT3CnEAEKp7mvHwLoL --execute CREATE TABLE IF NOT EXISTS `rememberMeTokens` (\n  `id` int AUTO_INCREMENT NOT NULL,\n  `userId` int NOT NULL,\n  `token` varchar(255) NOT NULL UNIQUE,\n  `tokenHash` varchar(255) NOT NULL,\n  `userAgent` text,\n  `ipAddress` varchar(45),\n  `expiresAt` timestamp NOT NULL,\n  `lastUsedAt` timestamp,\n  `revokedAt` timestamp,\n  `createdAt` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,\n  PRIMARY KEY (`id`),\n  KEY `idx_user_remember` (`userId`),\n  KEY `idx_token_remember` (`token`),\n  KEY `idx_expires_remember` (`expiresAt`)\n)",
+  "rows": [],
+  "messages": [],
+  "stdout": "",
+  "stderr": "",
+  "execution_time_ms": 508
+}
