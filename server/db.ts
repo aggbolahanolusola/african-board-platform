@@ -7,16 +7,41 @@ import {
   auditLogs,
 } from "../drizzle/schema";
 import { drizzle } from "drizzle-orm/mysql2";
+import mysql from "mysql2";
 import { InsertUser, users } from "../drizzle/schema";
 import { ENV } from './_core/env';
 
 let _db: ReturnType<typeof drizzle> | null = null;
 
+/** Managed hosts (TiDB Cloud, Aiven, PlanetScale, …) require a TLS connection. */
+function requiresTls(url: string): boolean {
+  return (
+    /tidbcloud\.com|aivencloud\.com|psdb\.cloud|planetscale|[?&]ssl=|sslaccept=/.test(url) ||
+    process.env.DB_SSL === "true"
+  );
+}
+
 // Lazily create the drizzle instance so local tooling can run without a DB.
 export async function getDb() {
   if (!_db && process.env.DATABASE_URL) {
     try {
-      _db = drizzle(process.env.DATABASE_URL);
+      const url = process.env.DATABASE_URL;
+      if (requiresTls(url)) {
+        // Parse the URL and connect over TLS explicitly (cloud MySQL rejects
+        // plaintext). Works whether or not the URL carries an ?ssl= param.
+        const u = new URL(url);
+        const pool = mysql.createPool({
+          host: u.hostname,
+          port: u.port ? Number(u.port) : 3306,
+          user: decodeURIComponent(u.username),
+          password: decodeURIComponent(u.password),
+          database: u.pathname.replace(/^\//, "") || undefined,
+          ssl: { minVersion: "TLSv1.2", rejectUnauthorized: true },
+        });
+        _db = drizzle(pool);
+      } else {
+        _db = drizzle(url);
+      }
     } catch (error) {
       console.warn("[Database] Failed to connect:", error);
       _db = null;
