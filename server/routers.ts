@@ -37,10 +37,20 @@ import { teamRouter } from "./team/procedures";
 import { recordingRouter } from "./recordings/procedures";
 import { nigerianComplianceRouter } from "./compliance/nigerian-procedures";
 
+/**
+ * Strip server-only fields (e.g. passwordHash) before returning a user to the
+ * client. Never send credential material to the browser.
+ */
+function toPublicUser<T extends Record<string, any> | null | undefined>(user: T) {
+  if (!user) return user;
+  const { passwordHash, ...rest } = user as Record<string, any>;
+  return rest as Omit<NonNullable<T>, "passwordHash">;
+}
+
 export const appRouter = router({
   system: systemRouter,
   auth: router({
-    me: publicProcedure.query(opts => opts.ctx.user),
+    me: publicProcedure.query(opts => toPublicUser(opts.ctx.user)),
     logout: publicProcedure.mutation(({ ctx }) => {
       const cookieOptions = getSessionCookieOptions(ctx.req);
       ctx.res.clearCookie(COOKIE_NAME, { ...cookieOptions, maxAge: -1 });
@@ -151,7 +161,7 @@ export const appRouter = router({
 
           return {
             success: true,
-            user,
+            user: toPublicUser(user),
             token: sessionToken,
           };
         } catch (error) {
