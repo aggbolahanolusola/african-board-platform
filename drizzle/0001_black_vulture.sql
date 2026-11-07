@@ -168,7 +168,7 @@ CREATE TABLE `organizations` (
 	`description` text,
 	`country` varchar(100),
 	`timezone` varchar(50) DEFAULT 'UTC',
-	`complianceFrameworks` json DEFAULT ('["kingIV","ohada","popia","ndpr"]'),
+	`complianceFrameworks` json,
 	`dataResidency` varchar(100) DEFAULT 'regional',
 	`createdAt` timestamp NOT NULL DEFAULT (now()),
 	`updatedAt` timestamp NOT NULL DEFAULT (now()) ON UPDATE CURRENT_TIMESTAMP,
