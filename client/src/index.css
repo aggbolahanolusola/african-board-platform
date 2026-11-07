@@ -45,94 +45,94 @@
 :root {
   /* African-Inspired NurtGov Brand Colors */
   /* Deep Teal - African waters */
-  --primary: oklch(0.55 0.18 200);
+  --primary: oklch(0.42 0.055 250);
   --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.55 0.18 200);
+  --sidebar-primary: oklch(0.42 0.055 250);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   
   /* Brilliant Gold/Saffron - African warmth */
-  --accent: oklch(0.75 0.22 70);
-  --accent-foreground: oklch(0.15 0.02 50);
+  --accent: oklch(0.70 0.16 34);
+  --accent-foreground: oklch(0.28 0.05 34);
   
   /* Warm Terracotta/Orange - Earth tones */
-  --secondary: oklch(0.65 0.20 40);
+  --secondary: oklch(0.55 0.08 240);
   --secondary-foreground: oklch(0.98 0 0);
   
   /* Chart colors - African palette */
-  --chart-1: oklch(0.55 0.18 200);
-  --chart-2: oklch(0.75 0.22 70);
-  --chart-3: oklch(0.65 0.20 40);
-  --chart-4: oklch(0.50 0.15 150);
-  --chart-5: oklch(0.60 0.18 30);
+  --chart-1: oklch(0.42 0.055 250);
+  --chart-2: oklch(0.70 0.16 34);
+  --chart-3: oklch(0.55 0.08 240);
+  --chart-4: oklch(0.60 0.10 210);
+  --chart-5: oklch(0.74 0.13 55);
   
   --radius: 0.65rem;
   --background: oklch(0.98 0 0);
-  --foreground: oklch(0.20 0.02 50);
-  --card: oklch(0.97 0.01 70);
-  --card-foreground: oklch(0.20 0.02 50);
+  --foreground: oklch(0.26 0.02 255);
+  --card: oklch(0.985 0.004 255);
+  --card-foreground: oklch(0.26 0.02 255);
   --popover: oklch(0.98 0 0);
-  --popover-foreground: oklch(0.20 0.02 50);
+  --popover-foreground: oklch(0.26 0.02 255);
   
-  --muted: oklch(0.92 0.01 70);
-  --muted-foreground: oklch(0.55 0.05 50);
+  --muted: oklch(0.955 0.006 255);
+  --muted-foreground: oklch(0.52 0.02 255);
   
   --destructive: oklch(0.65 0.25 20);
   --destructive-foreground: oklch(0.98 0 0);
   
-  --border: oklch(0.90 0.02 70);
-  --input: oklch(0.92 0.02 70);
-  --ring: oklch(0.75 0.22 70);
+  --border: oklch(0.91 0.008 255);
+  --input: oklch(0.93 0.008 255);
+  --ring: oklch(0.70 0.16 34);
   
   --sidebar: oklch(0.98 0 0);
-  --sidebar-foreground: oklch(0.20 0.02 50);
-  --sidebar-accent: oklch(0.75 0.22 70);
-  --sidebar-accent-foreground: oklch(0.15 0.02 50);
-  --sidebar-border: oklch(0.90 0.02 70);
-  --sidebar-ring: oklch(0.75 0.22 70);
+  --sidebar-foreground: oklch(0.26 0.02 255);
+  --sidebar-accent: oklch(0.70 0.16 34);
+  --sidebar-accent-foreground: oklch(0.28 0.05 34);
+  --sidebar-border: oklch(0.91 0.008 255);
+  --sidebar-ring: oklch(0.70 0.16 34);
 }
 
 .dark {
   /* African-Inspired Dark Mode */
-  --primary: oklch(0.60 0.18 200);
+  --primary: oklch(0.62 0.07 250);
   --primary-foreground: oklch(0.98 0 0);
-  --sidebar-primary: oklch(0.60 0.18 200);
+  --sidebar-primary: oklch(0.62 0.07 250);
   --sidebar-primary-foreground: oklch(0.98 0 0);
   
-  --background: oklch(0.15 0.02 50);
-  --foreground: oklch(0.92 0.01 70);
-  --card: oklch(0.22 0.02 50);
-  --card-foreground: oklch(0.92 0.01 70);
-  --popover: oklch(0.22 0.02 50);
-  --popover-foreground: oklch(0.92 0.01 70);
+  --background: oklch(0.17 0.02 255);
+  --foreground: oklch(0.955 0.006 255);
+  --card: oklch(0.22 0.02 255);
+  --card-foreground: oklch(0.955 0.006 255);
+  --popover: oklch(0.22 0.02 255);
+  --popover-foreground: oklch(0.955 0.006 255);
   
-  --secondary: oklch(0.70 0.20 40);
+  --secondary: oklch(0.60 0.09 240);
   --secondary-foreground: oklch(0.98 0 0);
   
-  --muted: oklch(0.30 0.02 50);
-  --muted-foreground: oklch(0.70 0.05 70);
+  --muted: oklch(0.30 0.02 255);
+  --muted-foreground: oklch(0.72 0.02 255);
   
-  --accent: oklch(0.80 0.22 70);
-  --accent-foreground: oklch(0.15 0.02 50);
+  --accent: oklch(0.72 0.16 34);
+  --accent-foreground: oklch(0.28 0.05 34);
   
   --destructive: oklch(0.70 0.25 20);
   --destructive-foreground: oklch(0.98 0 0);
   
   --border: oklch(1 0 0 / 12%);
   --input: oklch(1 0 0 / 18%);
-  --ring: oklch(0.80 0.22 70);
+  --ring: oklch(0.72 0.16 34);
   
-  --chart-1: oklch(0.75 0.22 70);
-  --chart-2: oklch(0.60 0.18 200);
-  --chart-3: oklch(0.70 0.20 40);
+  --chart-1: oklch(0.70 0.16 34);
+  --chart-2: oklch(0.62 0.07 250);
+  --chart-3: oklch(0.60 0.09 240);
   --chart-4: oklch(0.55 0.15 150);
-  --chart-5: oklch(0.65 0.18 30);
+  --chart-5: oklch(0.74 0.13 55);
   
-  --sidebar: oklch(0.22 0.02 50);
-  --sidebar-foreground: oklch(0.92 0.01 70);
-  --sidebar-accent: oklch(0.80 0.22 70);
-  --sidebar-accent-foreground: oklch(0.15 0.02 50);
+  --sidebar: oklch(0.22 0.02 255);
+  --sidebar-foreground: oklch(0.955 0.006 255);
+  --sidebar-accent: oklch(0.72 0.16 34);
+  --sidebar-accent-foreground: oklch(0.28 0.05 34);
   --sidebar-border: oklch(1 0 0 / 12%);
-  --sidebar-ring: oklch(0.80 0.22 70);
+  --sidebar-ring: oklch(0.72 0.16 34);
 }
 
 @layer base {
@@ -159,15 +159,15 @@
         45deg,
         transparent,
         transparent 35px,
-        oklch(0.55 0.18 200 / 0.03) 35px,
-        oklch(0.55 0.18 200 / 0.03) 70px
+        oklch(0.42 0.055 250 / 0.03) 35px,
+        oklch(0.42 0.055 250 / 0.03) 70px
       ),
       repeating-linear-gradient(
         -45deg,
         transparent,
         transparent 35px,
-        oklch(0.75 0.22 70 / 0.03) 35px,
-        oklch(0.75 0.22 70 / 0.03) 70px
+        oklch(0.70 0.16 34 / 0.03) 35px,
+        oklch(0.70 0.16 34 / 0.03) 70px
       );
   }
   
@@ -175,22 +175,22 @@
   .gradient-african {
     background: linear-gradient(
       135deg,
-      oklch(0.55 0.18 200) 0%,
-      oklch(0.75 0.22 70) 100%
+      oklch(0.42 0.055 250) 0%,
+      oklch(0.70 0.16 34) 100%
     );
   }
   
   .gradient-warm {
     background: linear-gradient(
       135deg,
-      oklch(0.65 0.20 40) 0%,
-      oklch(0.75 0.22 70) 100%
+      oklch(0.55 0.08 240) 0%,
+      oklch(0.70 0.16 34) 100%
     );
   }
   
   /* Shadow - African inspired depth */
   .shadow-african {
-    box-shadow: 0 10px 30px oklch(0.55 0.18 200 / 0.15),
+    box-shadow: 0 10px 30px oklch(0.42 0.055 250 / 0.15),
       0 1px 3px oklch(0 0 0 / 0.1);
   }
   
@@ -198,8 +198,8 @@
   .text-gradient-african {
     background: linear-gradient(
       135deg,
-      oklch(0.55 0.18 200) 0%,
-      oklch(0.75 0.22 70) 100%
+      oklch(0.42 0.055 250) 0%,
+      oklch(0.70 0.16 34) 100%
     );
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;

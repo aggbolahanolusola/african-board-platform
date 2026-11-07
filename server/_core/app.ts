@@ -31,7 +31,7 @@ export function buildApp() {
         directives: {
           defaultSrc: ["'self'"],
           scriptSrc: ["'self'", "manus-analytics.com"],
-          styleSrc: ["'self'", "'unsafe-inline'"],
+          styleSrc: ["'self'", "'unsafe-inline'", "https://fonts.googleapis.com"],
           imgSrc: ["'self'", "data:", "https:"],
           fontSrc: ["'self'", "data:", "https:"],
           connectSrc: ["'self'", "https://manus-analytics.com"],
