@@ -67,9 +67,10 @@ writeFileSync(
       routes: [
         // Serve real static files first (assets, logo, etc.).
         { handle: "filesystem" },
-        // Everything else (/, /api/*, client routes) goes to the Express function,
-        // which preserves the original request path.
-        { src: "/(.*)", dest: "/" },
+        // Everything else (/, /api/*, client routes) goes to the Express function.
+        // The function lives at functions/index.func, so its route is "/index";
+        // Vercel passes the original request path through to it.
+        { src: "/(.*)", dest: "/index" },
       ],
     },
     null,
