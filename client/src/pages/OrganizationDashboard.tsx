@@ -133,7 +133,7 @@ export default function OrganizationDashboard() {
               <div className="w-8 h-8 bg-primary rounded-lg flex items-center justify-center">
                 <span className="text-white font-bold text-sm">AG</span>
               </div>
-              <span className="font-semibold text-foreground hidden sm:inline">AfriGov</span>
+              <span className="font-semibold text-foreground hidden sm:inline">NurtGov</span>
             </button>
 
             {/* Navigation Links */}
